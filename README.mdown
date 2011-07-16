@@ -75,17 +75,17 @@ HNException is exactly the same as a plain Python [Exception][exception]. The HN
 
 Here's a really simple example of how to use hn-api:
 
-	from hnapi import *
+	from hnapi import hnapi 
 	
-	hn = HackerNewsAPI()
+	hn = hnapi.HackerNewsAPI()
 	stories = hn.getTopStories()
 	for s in stories:
 		s.printDetails()
 		
 To break this down:
 
-- `from hnapi import *` imports the code you need from hnapi.py.
-- `hn = HackerNewsAPI()` instantiates the API.
+- `from hnapi import hnapi` imports the code you need from hnapi.py.
+- `hn = hnapi.HackerNewsAPI()` instantiates the API.
 - `stories = hn.getTopStories()` gets the 30 stories on the front page of HN and stores them in a list of HackerNewsStory objects.
 - `for s in stories: s.printDetails()` prints the details of every story on the front page of HN.
 
